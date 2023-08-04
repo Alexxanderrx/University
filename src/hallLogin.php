@@ -37,6 +37,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $_SESSION["menuCargo"] = "ALUMNOS";
             $_SESSION["cargo"] = "Alumno";
             $_SESSION["pemision3"] = "hidden";
+
+            $_SESSION["id_info"] = $datosLog["id_info"];
+            // $resultInfoClass = $mysqli->query("SELECT * FROM info_classes WHERE id_info_fk = '$id_info'");
+            // $datosInfoClass = $resultInfoClass->fetch_assoc();
+            // // print_r($datosInfoClass);
+            // $nameClass = $datosInfoClass["id_class_fk"];
+            // $grade = $datosInfoClass["grade"];
+            // $messages = $datosInfoClass["messages"];
+
         }
 
         header("Location:lobbyAdmin.php");

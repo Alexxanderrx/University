@@ -24,6 +24,8 @@ const pPermisos = document.getElementById("pPermisos");
 const pMaestros = document.getElementById("pMaestros");
 const pAlumnos = document.getElementById("pAlumnos");
 const pClases = document.getElementById("pClases");
+const pCalificaciones = document.getElementById("pCalificaciones");
+const pAdminis = document.getElementById("pAdminis");
 const section01 = document.getElementById("section01");
 
 const btnTree = document.getElementById("btnOpen");
@@ -43,6 +45,8 @@ btnTree.addEventListener("click", () => {
     pMaestros.classList.toggle("md:flex");
     pAlumnos.classList.toggle("md:flex");
     pClases.classList.toggle("md:flex");
+    pCalificaciones.classList.toggle("md:flex");
+    pAdminis.classList.toggle("md:flex");
 });
 
 // document.getElementById("btnSubmit").addEventListener("click", function () {
@@ -122,6 +126,9 @@ btnCalific.addEventListener("click", () => {
     secBienvenida.classList.add("hidden");
     secCalific.classList.remove("hidden");
     secAdminis.classList.add("hidden");
+
+    document.getElementById("title01").innerHTML = "Calificaciones y mensajes de tus clases";
+    document.getElementById("title02").innerHTML = "Calificaciones";
 });
 
 
@@ -130,4 +137,10 @@ btnAdminis.addEventListener("click", () => {
     secAdminis.classList.remove("hidden");
     secCalific.classList.add("hidden");
 
+    document.getElementById("title01").innerHTML = "Esquema de Clases";
+    document.getElementById("title02").innerHTML = "Clases";
 });
+
+// var tabla = document.querySelector("#tabla");
+
+// var dataTable = new DataTable(tabla);
