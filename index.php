@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link href="../dist/output.css" rel="stylesheet">
+    <link href="./dist/output.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -24,8 +24,8 @@
 
         <form
             class=" md:dark:bg-gray-800 dark:bg-gray-900 bg-[#fff5d2] flex flex-col justify-center md:justify-between h-full md:h-fit w-full md:w-96 p-10 md:p-10 border-0 md:border border-gray-400 md:rounded-3xl"
-            name="formularioLogin" method="post" action="hallLogin.php">
-            <img src="../assets/logo.jpg" alt="logo.jpg" />
+            name="formularioLogin" method="post" action="./src/hallLogin.php">
+            <img src="./assets/logo.jpg" alt="logo.jpg" />
             <p style="font-family: 'Noto Sans', sans-serif;"
                 class="dark:text-white text-gray-600 mb-4 font-semibold text-lg">Bienvenido ingresa con tu cuenta</p>
             <div class="relative block mb-3">

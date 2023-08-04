@@ -1,7 +1,5 @@
 const toggleBar = document.getElementById("toggle");
-
 const toggleSpin = document.getElementById("spin");
-
 const btnOpen = document.getElementById("open");
 
 let spin = false;
@@ -53,3 +51,83 @@ btnTree.addEventListener("click", () => {
 //     }, 2000);
 // });
 
+//Botones del menu izquierdo
+const btnPermisos = document.getElementById("btnPermisos");
+const btnMaestros = document.getElementById("btnMaestros");
+const btnAlumnos = document.getElementById("btnAlumnos");
+const btnClases = document.getElementById("btnClases");
+
+const btnCalific = document.getElementById("btnCalificaciones");
+const btnAdminis = document.getElementById("btnAdminis");
+
+
+const secBienvenida = document.getElementById("sectionBienvenida");
+const secPermisos = document.getElementById("sectionPermisos");
+const secMaestros = document.getElementById("sectionMaestros");
+const secAlumnos = document.getElementById("sectionAlumnos");
+const secClases = document.getElementById("sectionClases");
+
+const secCalific = document.getElementById("sectionCalificaciones");
+const secAdminis = document.getElementById("sectionAdminis");
+
+btnPermisos.addEventListener("click", () => {
+    secPermisos.classList.remove("hidden");
+    // secPermisos.classList.add("flex");
+    secBienvenida.classList.add("hidden");
+    secMaestros.classList.add("hidden");
+    secAlumnos.classList.add("hidden");
+    secClases.classList.add("hidden");
+
+    document.getElementById("title01").innerHTML = "Permisos";
+    document.getElementById("title02").innerHTML = "Permisos";
+});
+
+btnMaestros.addEventListener("click", () => {
+    secMaestros.classList.remove("hidden");
+
+    secBienvenida.classList.add("hidden");
+    secPermisos.classList.add("hidden");
+    secAlumnos.classList.add("hidden");
+    secClases.classList.add("hidden");
+
+    document.getElementById("title01").innerHTML = "Maestros";
+    document.getElementById("title02").innerHTML = "Maestros";
+});
+
+btnAlumnos.addEventListener("click", () => {
+    secAlumnos.classList.remove("hidden");
+
+    secBienvenida.classList.add("hidden");
+    secPermisos.classList.add("hidden");
+    secMaestros.classList.add("hidden");
+    secClases.classList.add("hidden");
+
+    document.getElementById("title01").innerHTML = "Alumnos";
+    document.getElementById("title02").innerHTML = "Alumnos";
+});
+
+btnClases.addEventListener("click", () => {
+    secClases.classList.remove("hidden");
+
+    secBienvenida.classList.add("hidden");
+    secPermisos.classList.add("hidden");
+    secMaestros.classList.add("hidden");
+    secAlumnos.classList.add("hidden");
+
+    document.getElementById("title01").innerHTML = "Clases";
+    document.getElementById("title02").innerHTML = "Clases";
+});
+
+btnCalific.addEventListener("click", () => {
+    secBienvenida.classList.add("hidden");
+    secCalific.classList.remove("hidden");
+    secAdminis.classList.add("hidden");
+});
+
+
+btnAdminis.addEventListener("click", () => {
+    secBienvenida.classList.add("hidden");
+    secAdminis.classList.remove("hidden");
+    secCalific.classList.add("hidden");
+
+});

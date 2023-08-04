@@ -21,26 +21,29 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if ($datosLogRow == 1) {
 
         $_SESSION["nombre"] = $datosLog["name"];
-
+        $_SESSION["pemision1"] = " ";
+        $_SESSION["pemision2"] = " ";
+        $_SESSION["pemision3"] = " ";
 
         if ($datosLog["id_rol"] == 1) {
-
             $_SESSION["cargo"] = "Administrador";
-            // $_SESSION[""]=;
-            // $_SESSION[""]=;
-            // $_SESSION[""]=;
-            // $show = "SELECT * FROM user WHERE email = '$eLG' AND password = '$pLG' AND rol = 1";
+            $_SESSION["menuCargo"] = "ADMINISTRACIÓN";
+            $_SESSION["pemision1"] = "hidden";
         } elseif ($datosLog["id_rol"] == 2) {
             $_SESSION["cargo"] = "Maestro";
+            $_SESSION["menuCargo"] = "MAESTROS";
+            $_SESSION["pemision2"] = "hidden";
         } elseif ($datosLog["id_rol"] == 3) {
+            $_SESSION["menuCargo"] = "ALUMNOS";
             $_SESSION["cargo"] = "Alumno";
+            $_SESSION["pemision3"] = "hidden";
         }
 
         header("Location:lobbyAdmin.php");
         die();
     } else {
         $_SESSION["message_error"] = "Usuario o contraseña incorrectos.";
-        header("Location:index.php");
+        header("Location:../index.php");
         die();
     }
 
@@ -64,7 +67,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // $dId = $_SESSION["info_id"];
     // $show = "SELECT * FROM users WHERE id = '$dId';";
     $_SESSION["message_error"] = "Erro al enviar datos.";
-    header("Location:index.php");
+    header("Location:../index.php");
     die();
 }
 
