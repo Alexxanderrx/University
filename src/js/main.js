@@ -46,3 +46,10 @@ btnTree.addEventListener("click", () => {
     pAlumnos.classList.toggle("md:flex");
     pClases.classList.toggle("md:flex");
 });
+
+// document.getElementById("btnSubmit").addEventListener("click", function () {
+//     setTimeout(function () {
+//         document.getElementById("messageError").classList.add("hidden");
+//     }, 2000);
+// });
+

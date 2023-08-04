@@ -10,28 +10,37 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $eLG = $_SESSION["email_Lg"];
     $pLG = $_SESSION["pass_Lg"];
 
-    $resultLog = $mysqli->query("SELECT * FROM users WHERE email = '$eLG' AND password ='$pLG'");
+    $resultLog = $mysqli->query("SELECT * FROM info WHERE email = '$eLG' AND password ='$pLG'");
     $datosLog = $resultLog->fetch_assoc();
 
-    $resultLog = $mysqli->query("SELECT * FROM users WHERE email = '$eLG' AND password ='$pLG'");
-    $datosLog = $resultLog->fetch_assoc();
+    // $resultLog = $mysqli->query("SELECT * FROM info WHERE email = '$eLG' AND password ='$pLG'");
+    // $datosLog = $resultLog->fetch_assoc();
 
     $datosLogRow = $resultLog->num_rows;
 
     if ($datosLogRow == 1) {
+
+        $_SESSION["nombre"] = $datosLog["name"];
+
+
         if ($datosLog["id_rol"] == 1) {
-            $_SESSION["cargo"]="Administrador";
+
+            $_SESSION["cargo"] = "Administrador";
             // $_SESSION[""]=;
             // $_SESSION[""]=;
             // $_SESSION[""]=;
             // $show = "SELECT * FROM user WHERE email = '$eLG' AND password = '$pLG' AND rol = 1";
         } elseif ($datosLog["id_rol"] == 2) {
-            $show = "SELECT * FROM user WHERE email = '$eLG' AND password = '$pLG' AND rol = 2";
+            $_SESSION["cargo"] = "Maestro";
         } elseif ($datosLog["id_rol"] == 3) {
-            $show = "SELECT * FROM user WHERE email = '$eLG' AND password = '$pLG' AND rol = 3";
+            $_SESSION["cargo"] = "Alumno";
         }
+
+        header("Location:lobbyAdmin.php");
+        die();
     } else {
         $_SESSION["message_error"] = "Usuario o contraseña incorrectos.";
+        header("Location:index.php");
         die();
     }
 
@@ -54,6 +63,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     //si NO es POST inicia secion con id
     // $dId = $_SESSION["info_id"];
     // $show = "SELECT * FROM users WHERE id = '$dId';";
+    $_SESSION["message_error"] = "Erro al enviar datos.";
+    header("Location:index.php");
+    die();
 }
 
 // $result = $mysqli->query($show);
