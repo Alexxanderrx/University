@@ -31,9 +31,9 @@ const section01 = document.getElementById("section01");
 const btnTree = document.getElementById("btnOpen");
 
 btnTree.addEventListener("click", () => {
-    section01.classList.toggle("w-4/5");
+    section01.classList.toggle("w-5/6");
     section01.classList.toggle("w-full");
-    toggleMenu.classList.toggle("w-1/5");
+    toggleMenu.classList.toggle("w-1/6");
     toggleMenu.classList.toggle("w-[250px]");
     toggleMenuU.classList.toggle("md:justify-start");
     toggleMenuU.classList.toggle("md:pl-4");

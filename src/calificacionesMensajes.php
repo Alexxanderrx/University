@@ -1,7 +1,7 @@
 <?php
 require("connection.php");
 ?>
-<card class=" w-full h-[450px] p-4 bg-white border md:overflow-hidden  overflow-scroll">
+<card class=" w-full md:h-full h-[350px] p-4 bg-white border md:overflow-hidden  overflow-scroll">
     <table id="tablaCalificaciones" class="display border ">
         <thead>
             <tr>
