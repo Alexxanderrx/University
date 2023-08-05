@@ -74,6 +74,8 @@ const secClases = document.getElementById("sectionClases");
 const secCalific = document.getElementById("sectionCalificaciones");
 const secAdminis = document.getElementById("sectionAdminis");
 
+const sectionEdit = document.getElementById("sectionEditar");
+
 btnPermisos.addEventListener("click", () => {
     secPermisos.classList.remove("hidden");
     // secPermisos.classList.add("flex");
@@ -81,7 +83,7 @@ btnPermisos.addEventListener("click", () => {
     secMaestros.classList.add("hidden");
     secAlumnos.classList.add("hidden");
     secClases.classList.add("hidden");
-
+    sectionEdit.classList.add("hidden");
     document.getElementById("title01").innerHTML = "Permisos";
     document.getElementById("title02").innerHTML = "Permisos";
 });
@@ -93,7 +95,7 @@ btnMaestros.addEventListener("click", () => {
     secPermisos.classList.add("hidden");
     secAlumnos.classList.add("hidden");
     secClases.classList.add("hidden");
-
+    sectionEdit.classList.add("hidden");
     document.getElementById("title01").innerHTML = "Maestros";
     document.getElementById("title02").innerHTML = "Maestros";
 });
@@ -105,7 +107,7 @@ btnAlumnos.addEventListener("click", () => {
     secPermisos.classList.add("hidden");
     secMaestros.classList.add("hidden");
     secClases.classList.add("hidden");
-
+    sectionEdit.classList.add("hidden");
     document.getElementById("title01").innerHTML = "Alumnos";
     document.getElementById("title02").innerHTML = "Alumnos";
 });
@@ -117,7 +119,7 @@ btnClases.addEventListener("click", () => {
     secPermisos.classList.add("hidden");
     secMaestros.classList.add("hidden");
     secAlumnos.classList.add("hidden");
-
+    sectionEdit.classList.add("hidden");
     document.getElementById("title01").innerHTML = "Clases";
     document.getElementById("title02").innerHTML = "Clases";
 });
@@ -126,7 +128,7 @@ btnCalific.addEventListener("click", () => {
     secBienvenida.classList.add("hidden");
     secCalific.classList.remove("hidden");
     secAdminis.classList.add("hidden");
-
+    sectionEdit.classList.add("hidden");
     document.getElementById("title01").innerHTML = "Calificaciones y mensajes de tus clases";
     document.getElementById("title02").innerHTML = "Calificaciones";
 });
@@ -136,11 +138,32 @@ btnAdminis.addEventListener("click", () => {
     secBienvenida.classList.add("hidden");
     secAdminis.classList.remove("hidden");
     secCalific.classList.add("hidden");
-
+    sectionEdit.classList.add("hidden");
     document.getElementById("title01").innerHTML = "Esquema de Clases";
     document.getElementById("title02").innerHTML = "Clases";
 });
 
-// var tabla = document.querySelector("#tabla");
 
-// var dataTable = new DataTable(tabla);
+//Button Profile 
+const btnProfile = document.getElementById("btnProfile");
+btnProfile.addEventListener("click", () => {
+    sectionEdit.classList.remove("hidden");
+
+    secBienvenida.classList.add("hidden");
+    secMaestros.classList.add("hidden");
+    secAlumnos.classList.add("hidden");
+    secClases.classList.add("hidden");
+    secPermisos.classList.add("hidden");
+    secAdminis.classList.add("hidden");
+    secCalific.classList.add("hidden");
+
+    toggleBar.classList.toggle("collapse");
+    spin = (!spin);
+    if (spin == true) {
+        toggleSpin.style.transform = "rotate(180deg)";
+    } else if (spin == false) {
+        toggleSpin.style.transform = "rotate(0deg)";
+    }
+    document.getElementById("title01").innerHTML = "Editar datos de perfil";
+    document.getElementById("title02").innerHTML = "Editar datos";
+});

@@ -21,9 +21,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if ($datosLogRow == 1) {
 
         $_SESSION["nombre"] = $datosLog["name"];
+        $_SESSION["apellido"] = $datosLog["lastname"];
         $_SESSION["pemision1"] = " ";
         $_SESSION["pemision2"] = " ";
         $_SESSION["pemision3"] = " ";
+        $_SESSION["id_info"] = $datosLog["id_info"];
 
         if ($datosLog["id_rol"] == 1) {
             $_SESSION["cargo"] = "Administrador";
@@ -37,8 +39,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $_SESSION["menuCargo"] = "ALUMNOS";
             $_SESSION["cargo"] = "Alumno";
             $_SESSION["pemision3"] = "hidden";
-
-            $_SESSION["id_info"] = $datosLog["id_info"];
             // $resultInfoClass = $mysqli->query("SELECT * FROM info_classes WHERE id_info_fk = '$id_info'");
             // $datosInfoClass = $resultInfoClass->fetch_assoc();
             // // print_r($datosInfoClass);
@@ -48,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         }
 
-        header("Location:lobbyAdmin.php");
+        header("Location:lobby.php");
         die();
     } else {
         $_SESSION["message_error"] = "Usuario o contraseña incorrectos.";
@@ -87,7 +87,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
 
 // if ($numFilas === 1) {
-//     header("Location: lobbyAdmin.php");
+//     header("Location: lobby.php");
 // } else {
 //     $_SESSION["error_lg"] = "Wrong email or password.";
 //     header("Location: login.php");

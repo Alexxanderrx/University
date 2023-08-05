@@ -21,9 +21,8 @@
 
     <div class="  flex flex-col justify-center items-center h-full md:h-[480px] w-screen  md:w-96 ">
 
-
         <form
-            class=" md:dark:bg-gray-800 dark:bg-gray-900 bg-[#fff5d2] flex flex-col justify-center md:justify-between h-full md:h-fit w-full md:w-96 p-10 md:p-10 border-0 md:border border-gray-400 md:rounded-3xl"
+            class="bg-[#fff5d2] flex flex-col justify-center md:justify-between h-full md:h-fit w-full md:w-96 p-10 md:p-10 border-0 md:border border-gray-400 md:rounded-3xl"
             name="formularioLogin" method="post" action="./src/hallLogin.php">
             <img src="./assets/logo.jpg" alt="logo.jpg" />
             <p style="font-family: 'Noto Sans', sans-serif;"
