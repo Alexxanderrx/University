@@ -1,4 +1,4 @@
-<!-- <?php session_start(); ?> -->
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html class=''>
 
@@ -59,14 +59,16 @@
             </div>
 
             <div id='messageError' class='my-1'>
-                <?php
-                if (isset($_SESSION["message_error"])) {
-                    print_r("<p class='text-center  text-red-700'>" . $_SESSION["message_error"] . "</p>");
-                    unset($_SESSION["message_error"]);
-                } else {
-                    print_r("<p>&#160;</p>");
-                }
-                ?>
+                <p class='text-center  text-red-700'>
+                    <?php
+                    if (isset($_SESSION["message_error"])) {
+                        print_r($_SESSION["message_error"]);
+                        unset($_SESSION["message_error"]);
+                    } else {
+                        print_r("&#160;");
+                    }
+                    ?>
+                </p>
             </div>
 
             <button id="btnSubmit"

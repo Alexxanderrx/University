@@ -124,8 +124,9 @@ if ($_SESSION) {
 
                         <p class="pl-4">Home</p>
                     </div>
-                    <div id="open" class="flex h-full  justify-end items-center px-4 hover:bg-[#f2f2f2]">
-                        <p class="pr-2"><?php print_r($_SESSION["nombre"]); ?></p>
+                    <div id="open" class="flex h-full md:w-48 w-40 justify-end items-center px-4 hover:bg-[#f2f2f2]">
+                        <p class="pr-2 truncate"><?php print_r($_SESSION["nombre"] . " " . $_SESSION["apellido"]); ?>
+                        </p>
                         <svg id="spin" style="transition-duration: 500ms;" xmlns="http://www.w3.org/2000/svg"
                             fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
@@ -175,42 +176,41 @@ if ($_SESSION) {
                         <p>Seleciona la acción que quieres realizar en la pestaña de menu de la izquierda</p>
                     </card>
                 </section>
-                <section id="sectionPermisos" class="hidden flex border  w-11/12  justify-start items-start">
+                <section id="sectionPermisos" class="hidden flex border h-[77%] w-11/12  justify-start items-start">
                     <card class=" w-[540px] p-4 bg-white border">
                         <p>Permisos</p>
                         <p>los permisos</p>
                     </card>
                 </section>
-                <section id="sectionMaestros" class="hidden flex border  w-11/12  justify-start items-start">
+                <section id="sectionMaestros" class="hidden flex border h-[77%] w-11/12  justify-start items-start">
                     <card class=" w-[540px] p-4 bg-white border">
                         <p>Maestro</p>
                         <p>Los maestros</p>
                     </card>
                 </section>
-                <section id="sectionAlumnos" class="hidden flex border  w-11/12  justify-start items-start">
+                <section id="sectionAlumnos" class="hidden flex border h-[77%] w-11/12  justify-start items-start">
                     <card class=" w-[540px] p-4 bg-white border">
                         <p>Alumnos</p>
                         <p>Los Alumnos</p>
                     </card>
                 </section>
-                <section id="sectionClases" class="hidden flex border  w-11/12  justify-start items-start">
+                <section id="sectionClases" class="hidden flex border h-[77%] w-11/12  justify-start items-start">
                     <card class=" w-[540px] p-4 bg-white border">
                         <p>Clases</p>
                         <p>Los clases</p>
                     </card>
                 </section>
 
-                <section id="sectionCalificaciones" class="hidden flex border  w-11/12  justify-start items-start">
-                    <?php include("./calificacionesMensajes.php"); ?>
+                <section id="sectionCalificaciones"
+                    class="hidden flex border h-[77%] w-11/12  justify-start items-start">
+                    <?php include("./calificMensajes.php"); ?>
                 </section>
-                <section id="sectionAdminis" class="hidden flex border  w-11/12  justify-start items-start">
-                    <card class=" w-[540px] p-4 bg-white border">
-                        <p>Administrar tus clases</p>
-                        <p>Los Administrar tus clases</p>
-                    </card>
+                <section id="sectionAdminis"
+                    class="hidden flex  md:flex-row flex-col border h-[77%] w-11/12  justify-between items-start">
+                    <?php include("./adminisClases.php"); ?>
                 </section>
 
-                <section id="sectionEditar" class="hidden flex border w-11/12 h-[75%] justify-start items-start">
+                <section id="sectionEditar" class="hidden flex border h-[77%] w-11/12 justify-start items-start">
                     <?php include("./editarDatos.php"); ?>
                 </section>
 

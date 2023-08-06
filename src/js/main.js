@@ -86,6 +86,13 @@ btnPermisos.addEventListener("click", () => {
     sectionEdit.classList.add("hidden");
     document.getElementById("title01").innerHTML = "Permisos";
     document.getElementById("title02").innerHTML = "Permisos";
+
+    toggleBar.classList.add("collapse");
+    if (spin == true) {
+        toggleSpin.style.transform = "rotate(180deg)";
+    } else if (spin == false) {
+        toggleSpin.style.transform = "rotate(0deg)";
+    }
 });
 
 btnMaestros.addEventListener("click", () => {
@@ -98,6 +105,13 @@ btnMaestros.addEventListener("click", () => {
     sectionEdit.classList.add("hidden");
     document.getElementById("title01").innerHTML = "Maestros";
     document.getElementById("title02").innerHTML = "Maestros";
+
+    toggleBar.classList.add("collapse");
+    if (spin == true) {
+        toggleSpin.style.transform = "rotate(180deg)";
+    } else if (spin == false) {
+        toggleSpin.style.transform = "rotate(0deg)";
+    }
 });
 
 btnAlumnos.addEventListener("click", () => {
@@ -110,6 +124,13 @@ btnAlumnos.addEventListener("click", () => {
     sectionEdit.classList.add("hidden");
     document.getElementById("title01").innerHTML = "Alumnos";
     document.getElementById("title02").innerHTML = "Alumnos";
+
+    toggleBar.classList.add("collapse");
+    if (spin == true) {
+        toggleSpin.style.transform = "rotate(180deg)";
+    } else if (spin == false) {
+        toggleSpin.style.transform = "rotate(0deg)";
+    }
 });
 
 btnClases.addEventListener("click", () => {
@@ -122,6 +143,13 @@ btnClases.addEventListener("click", () => {
     sectionEdit.classList.add("hidden");
     document.getElementById("title01").innerHTML = "Clases";
     document.getElementById("title02").innerHTML = "Clases";
+
+    toggleBar.classList.add("collapse");
+    if (spin == true) {
+        toggleSpin.style.transform = "rotate(180deg)";
+    } else if (spin == false) {
+        toggleSpin.style.transform = "rotate(0deg)";
+    }
 });
 
 btnCalific.addEventListener("click", () => {
@@ -131,6 +159,13 @@ btnCalific.addEventListener("click", () => {
     sectionEdit.classList.add("hidden");
     document.getElementById("title01").innerHTML = "Calificaciones y mensajes de tus clases";
     document.getElementById("title02").innerHTML = "Calificaciones";
+
+    toggleBar.classList.add("collapse");
+    if (spin == true) {
+        toggleSpin.style.transform = "rotate(180deg)";
+    } else if (spin == false) {
+        toggleSpin.style.transform = "rotate(0deg)";
+    }
 });
 
 
@@ -141,6 +176,13 @@ btnAdminis.addEventListener("click", () => {
     sectionEdit.classList.add("hidden");
     document.getElementById("title01").innerHTML = "Esquema de Clases";
     document.getElementById("title02").innerHTML = "Clases";
+
+    toggleBar.classList.add("collapse");
+    if (spin == true) {
+        toggleSpin.style.transform = "rotate(180deg)";
+    } else if (spin == false) {
+        toggleSpin.style.transform = "rotate(0deg)";
+    }
 });
 
 
@@ -164,6 +206,7 @@ btnProfile.addEventListener("click", () => {
     } else if (spin == false) {
         toggleSpin.style.transform = "rotate(0deg)";
     }
+
     document.getElementById("title01").innerHTML = "Editar datos de perfil";
     document.getElementById("title02").innerHTML = "Editar datos";
 });
