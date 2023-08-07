@@ -17,6 +17,7 @@ if ($_SESSION) {
         type="text/css">
     <script src="https://unpkg.com/vanilla-datatables@latest/dist/vanilla-dataTables.min.js" type="text/javascript">
     </script>
+    <script src="../node_modules/flowbite/dist/flowbite.min.js"></script>
 </head>
 
 <body>
@@ -176,25 +177,26 @@ if ($_SESSION) {
                         <p>Seleciona la acción que quieres realizar en la pestaña de menu de la izquierda</p>
                     </card>
                 </section>
-                <section id="sectionPermisos" class="hidden flex border h-[77%] w-11/12  justify-start items-start">
-                    <card class=" w-[540px] p-4 bg-white border">
-                        <p>Permisos</p>
-                        <p>los permisos</p>
-                    </card>
+                <section id="sectionPermisos"
+                    class="hidden flex border md:h-[77%] h-[70%] w-11/12  justify-start items-start">
+                    <?php include("./permisos.php"); ?>
                 </section>
-                <section id="sectionMaestros" class="hidden flex border h-[77%] w-11/12  justify-start items-start">
+                <section id="sectionMaestros"
+                    class="hidden flex border md:h-[77%] h-[70%] w-11/12  justify-start items-start">
                     <card class=" w-[540px] p-4 bg-white border">
                         <p>Maestro</p>
                         <p>Los maestros</p>
                     </card>
                 </section>
-                <section id="sectionAlumnos" class="hidden flex border h-[77%] w-11/12  justify-start items-start">
+                <section id="sectionAlumnos"
+                    class="hidden flex border md:h-[77%] h-[70%] w-11/12  justify-start items-start">
                     <card class=" w-[540px] p-4 bg-white border">
                         <p>Alumnos</p>
                         <p>Los Alumnos</p>
                     </card>
                 </section>
-                <section id="sectionClases" class="hidden flex border h-[77%] w-11/12  justify-start items-start">
+                <section id="sectionClases"
+                    class="hidden flex border md:h-[77%] h-[70%] w-11/12  justify-start items-start">
                     <card class=" w-[540px] p-4 bg-white border">
                         <p>Clases</p>
                         <p>Los clases</p>
