@@ -1,9 +1,12 @@
 <card class=" w-full md:h-full h-[350px] bg-white border md:overflow-y-scroll md:overflow-x-hidden overflow-scroll">
-    <div class="w-full  border-b p-3">
-        <p>Calificaciones y mensajes de tus clases</p>
+    <div class="w-full  border-b md:p-3 p-2">
+        <p class="md:text-base text-xs">Calificaciones y mensajes de tus clases</p>
     </div>
-    <div class="p-4">
-        <table id="tablaCalificaciones" class="display border ">
+
+    <div class="relative md:p-4 p-2 pt-0">
+        <button class=" top-5 w-fit dark:bg-gray-500 dark:hover:bg-gray-700 bg-[#007aff] hover:bg-[#1d3e8f] text-white  md:py-2 md:px-4 p-2 rounded-lg absolute  md:text-base text-xs" type=''>Inscribirse</button>
+        <table id="tablaCalificaciones" class="display  border md:text-base text-xs">
+
             <thead>
                 <tr>
                     <th>#</th>

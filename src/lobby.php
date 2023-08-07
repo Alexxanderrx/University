@@ -134,7 +134,7 @@ if ($_SESSION) {
 
                     </div>
                     <ul id="toggle"
-                        class="flex flex-col justify-center items-center py-4  md:w-48 w-40 border rounded-b-xl bg-white absolute right-0 md:top-16 top-16 collapse">
+                        class="flex flex-col justify-center items-center py-4  md:w-48 w-40 border rounded-b-xl bg-white absolute right-0 md:top-16 top-[63px] collapse z-10">
 
                         <div class=" w-11/12 border-b border-gray">
                             <button id="btnProfile"
@@ -202,15 +202,15 @@ if ($_SESSION) {
                 </section>
 
                 <section id="sectionCalificaciones"
-                    class="hidden flex border h-[77%] w-11/12  justify-start items-start">
+                    class="hidden flex border md:h-[77%] h-[70%]  w-11/12  justify-start items-start">
                     <?php include("./calificMensajes.php"); ?>
                 </section>
                 <section id="sectionAdminis"
-                    class="hidden flex  md:flex-row flex-col border h-[77%] w-11/12  justify-between items-start">
+                    class="hidden flex  md:flex-row flex-col md:h-[77%] h-[70%] w-11/12  justify-between items-start">
                     <?php include("./adminisClases.php"); ?>
                 </section>
 
-                <section id="sectionEditar" class="hidden flex border h-[77%] w-11/12 justify-start items-start">
+                <section id="sectionEditar" class="hidden flex md:h-[77%] h-[70%] w-11/12 justify-start items-start">
                     <?php include("./editarDatos.php"); ?>
                 </section>
 
