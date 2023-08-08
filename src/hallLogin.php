@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $veryficationEmail = $_POST["emailLg"];
     $veryficationEntry = $mysqli->query("SELECT * FROM info WHERE email = '$veryficationEmail'");
     $datosEntry = $veryficationEntry->fetch_assoc();
-    var_dump($datosEntry["state"]);
+    // var_dump($datosEntry["state"]);
     if ($datosEntry["state"] == 1) {
         //si es POST inicia secion con email y pass
         $_SESSION["email_Lg"] = $_POST["emailLg"];
