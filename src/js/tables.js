@@ -17,3 +17,9 @@ var tablaPermisos = document.querySelector("#tablaPermisos");
 var dataTable03 = new DataTable(tablaPermisos, {
     perPageSelect: false,
 });
+
+var tablaMaestros = document.querySelector("#tablaMaestros");
+
+var dataTable04 = new DataTable(tablaMaestros, {
+    perPageSelect: false,
+});
