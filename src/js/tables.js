@@ -35,3 +35,9 @@ var tablaClasses = document.querySelector("#tablaClasses");
 var dataTable06 = new DataTable(tablaClasses, {
     perPageSelect: false,
 });
+
+var tablaAlumnos4Profe = document.querySelector("#tablaAlumnos4Profe");
+
+var dataTable07 = new DataTable(tablaAlumnos4Profe, {
+    perPageSelect: false,
+});

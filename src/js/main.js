@@ -26,6 +26,7 @@ const pAlumnos = document.getElementById("pAlumnos");
 const pClases = document.getElementById("pClases");
 const pCalificaciones = document.getElementById("pCalificaciones");
 const pAdminis = document.getElementById("pAdminis");
+const pAlumnos002 = document.getElementById("pAlumnos002");
 const section01 = document.getElementById("section01");
 
 const btnTree = document.getElementById("btnOpen");
@@ -47,6 +48,7 @@ btnTree.addEventListener("click", () => {
     pClases.classList.toggle("md:flex");
     pCalificaciones.classList.toggle("md:flex");
     pAdminis.classList.toggle("md:flex");
+    pAlumnos002.classList.toggle("md:flex");
 });
 
 // document.getElementById("btnSubmit").addEventListener("click", function () {
@@ -64,6 +66,7 @@ const btnClases = document.getElementById("btnClases");
 const btnCalific = document.getElementById("btnCalificaciones");
 const btnAdminis = document.getElementById("btnAdminis");
 
+const btnAlumnos002 = document.getElementById("btnAlumnos002");
 
 const secBienvenida = document.getElementById("sectionBienvenida");
 const secPermisos = document.getElementById("sectionPermisos");
@@ -75,6 +78,7 @@ const secCalific = document.getElementById("sectionCalificaciones");
 const secAdminis = document.getElementById("sectionAdminis");
 
 const sectionEdit = document.getElementById("sectionEditar");
+const sectionAlumnosDelProfe = document.getElementById("sectionAlumnosDelProfe");
 
 btnPermisos.addEventListener("click", () => {
     secPermisos.classList.remove("hidden");
@@ -209,4 +213,12 @@ btnProfile.addEventListener("click", () => {
 
     document.getElementById("title01").innerHTML = "Editar datos de perfil";
     document.getElementById("title02").innerHTML = "Editar datos";
+});
+
+btnAlumnos002.addEventListener("click", () => {
+    secBienvenida.classList.add("hidden");
+
+    sectionAlumnosDelProfe.classList.remove("hidden");
+    document.getElementById("title01").innerHTML = "Alumnos de su Clase";
+    document.getElementById("title02").innerHTML = "Alumnos";
 });
