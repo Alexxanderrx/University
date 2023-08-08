@@ -23,3 +23,15 @@ var tablaMaestros = document.querySelector("#tablaMaestros");
 var dataTable04 = new DataTable(tablaMaestros, {
     perPageSelect: false,
 });
+
+var tablaMaestros = document.querySelector("#tablaAlumnos");
+
+var dataTable05 = new DataTable(tablaAlumnos, {
+    perPageSelect: false,
+});
+
+var tablaClasses = document.querySelector("#tablaClasses");
+
+var dataTable06 = new DataTable(tablaClasses, {
+    perPageSelect: false,
+});

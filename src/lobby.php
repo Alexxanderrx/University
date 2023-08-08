@@ -151,16 +151,10 @@ if ($_SESSION) {
                         <?php include("./listaMaestros.php"); ?>
                     </section>
                     <section id="sectionAlumnos" class="hidden flex border md:h-[77%] h-[70%] w-11/12  justify-start items-start">
-                        <card class=" w-[540px] p-4 bg-white border">
-                            <p>Alumnos</p>
-                            <p>Los Alumnos</p>
-                        </card>
+                        <?php include("./listaAlumnos.php"); ?>
                     </section>
                     <section id="sectionClases" class="hidden flex border md:h-[77%] h-[70%] w-11/12  justify-start items-start">
-                        <card class=" w-[540px] p-4 bg-white border">
-                            <p>Clases</p>
-                            <p>Los clases</p>
-                        </card>
+                        <?php include("./listaClasses.php"); ?>
                     </section>
 
                     <section id="sectionCalificaciones" class="hidden flex border md:h-[77%] h-[70%]  w-11/12  justify-start items-start">
